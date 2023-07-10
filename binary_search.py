@@ -10,10 +10,11 @@ def binary_search(arr,target,low,high):
     elif target<arr[mid]:
         return binary_search(arr,target,low,mid-1)      
 
-    else:
+    elif target> arr[mid]:
         return binary_search(arr,target,mid+1,high)
-
-
+    
+    else:
+        return " not found"
 
 
 
@@ -21,4 +22,4 @@ a=[1, 3,4 ,5,6,9,10,20]
 
 tar=4
 
-print(f'target found in index {binary_search(a,tar,0,len(a))}')
+print(f'target in index {binary_search(a,tar,0,len(a))}')
